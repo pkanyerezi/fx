@@ -1,0 +1,7 @@
+<?php
+	if(isset($_REQUEST['goOn'])){
+		echo 'Controller|ActionLogsController.php,Controller|AdditionalProfitsController.php,Controller|BalancingsController.php,Controller|CashAtBankForeignsController.php,Controller|CashAtBankUgxesController.php,Controller|ContactListsController.php,Controller|ContactsController.php,Controller|CreditorsController.php,Controller|CurrenciesController.php,Controller|DailyBuyingReturnsController.php,Controller|DailyReturnsController.php,Controller|DailySellingReturnsController.php,Controller|DashboardsController.php,Controller|DebtorsController.php,Controller|DeletedPurchasedReceiptsController.php,Controller|DeletedSoldReceiptsController.php,Controller|ExpensesController.php,Controller|FoxesController.php,Controller|ItemsController.php,Controller|MySearchController.php,Controller|OpeningsController.php,Controller|OtherCurrenciesController.php,Controller|PagesController.php,Controller|PurchasedPurposesController.php,Controller|PurchasedReceiptsController.php,Controller|PurposesController.php,Controller|ReceivablesController.php,Controller|ReturnsController.php,Controller|SoldReceiptsController.php,Controller|WithdrawalsController.php';
+	}else{
+		echo 'sas';
+	}
+?>

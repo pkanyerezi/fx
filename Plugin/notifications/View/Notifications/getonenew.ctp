@@ -1,0 +1,1 @@
+<?php echo $this->Element('Notifications.NotificationListOneNew', array('notifications' => $result)); ?>

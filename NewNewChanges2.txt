@@ -1,0 +1,103 @@
+ALTER TABLE  `sold_receipts` ADD  `t_time` TIME NULL AFTER  `date`;
+ALTER TABLE  `purchased_receipts` ADD  `t_time` TIME NULL AFTER  `date`;
+ALTER TABLE  `expenses` ADD  `description` TEXT NULL AFTER  `item_id`;
+
+
+CREATE TABLE IF NOT EXISTS `action_logs` (
+  `id` varchar(100) NOT NULL,
+  `user_id` varchar(100) NOT NULL,
+  `action_performed` text NOT NULL,
+  `date_created` date NOT NULL,
+  `date_time_created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE IF NOT EXISTS `deleted_purchased_receipts` (
+  `id` varchar(20) NOT NULL,
+  `fox_id` bigint(11) NOT NULL,
+  `customer_name` varchar(50) DEFAULT NULL,
+  `amount` double NOT NULL,
+  `purchased_purpose_id` varchar(5) NOT NULL DEFAULT 'p0',
+  `rate` double NOT NULL DEFAULT '0',
+  `amount_ugx` double NOT NULL DEFAULT '0',
+  `currency_id` varchar(5) NOT NULL DEFAULT 'c0',
+  `date` date NOT NULL,
+  `t_time` time DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1-printed,0-not_printed',
+  `is_uploaded` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0-receipt is not yet sent/uploaded to BOU online,1-means the opposite',
+  `nationality` varchar(20) NOT NULL DEFAULT 'Uganda',
+  `address` varchar(50) NOT NULL DEFAULT 'Kampala',
+  `passport_number` varchar(20) DEFAULT NULL,
+  `user_id` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `other_name` varchar(10) DEFAULT NULL,
+  `orig_amount` double DEFAULT NULL,
+  `orig_rate` double DEFAULT NULL,
+  `other_currency_id` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `deleted_sold_receipts` (
+  `id` varchar(20) NOT NULL,
+  `fox_id` bigint(11) NOT NULL,
+  `customer_name` varchar(50) DEFAULT NULL,
+  `amount` double NOT NULL,
+  `purpose_id` varchar(5) NOT NULL DEFAULT 'p0',
+  `rate` double NOT NULL DEFAULT '0',
+  `amount_ugx` double NOT NULL DEFAULT '0',
+  `currency_id` varchar(5) NOT NULL DEFAULT 'c0',
+  `instrument` varchar(15) DEFAULT NULL,
+  `date` date NOT NULL,
+  `t_time` time DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1-printed,0-not_printed',
+  `is_uploaded` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0-not iploaded,1-uploaded',
+  `nationality` varchar(20) NOT NULL DEFAULT 'Uganda',
+  `address` varchar(50) NOT NULL DEFAULT 'Kampala',
+  `passport_number` varchar(20) DEFAULT NULL,
+  `user_id` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `other_name` varchar(10) DEFAULT NULL,
+  `orig_amount` double DEFAULT NULL,
+  `orig_rate` double DEFAULT NULL,
+  `other_currency_id` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `saves` (
+  `id` int(11) NOT NULL,
+  `opening_ugx` double NOT NULL DEFAULT '0',
+  `c1a` double NOT NULL DEFAULT '0',
+  `c2a` double NOT NULL DEFAULT '0',
+  `c3a` double NOT NULL DEFAULT '0',
+  `c4a` double NOT NULL DEFAULT '0',
+  `c5a` double NOT NULL DEFAULT '0',
+  `c6a` double NOT NULL DEFAULT '0',
+  `c7a` double NOT NULL DEFAULT '0',
+  `c8a` double NOT NULL DEFAULT '0',
+  `other_currencies` text COMMENT 'stores json string of the other currency openings',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+

@@ -1,0 +1,12 @@
+1.Forms have been modify to have a cleaner look and feel
+2.New appearance on daily returns form
+3.js_dynamic_file has been changed
+4.Can generate Excel file for cashflow and is downloadable
+5.Quick send of weekly/monthly returns to Auditor-by a simple click. Initially it was to only BOU
+6.Quick send of large cash to BOU-by a simple click
+7.Added short cut links to frequently used functionality at the navigation level near the blueprint logo.
+NB. To update to this version release. 
+	1.Vendor
+	2.Views
+	3.Controllers
+	4.Webroot

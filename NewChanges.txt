@@ -1,0 +1,249 @@
+ALTER TABLE  `debtors` ADD  `customer_id` VARCHAR( 100 ) NULL AFTER  `customer`
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE  `creditors` ADD  `customer_id` VARCHAR( 100 ) NULL AFTER  `customer`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 09, 2013 at 01:24 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `forexbuerau`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `creditors`
+--
+
+CREATE TABLE IF NOT EXISTS `receivables` (
+  `id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,
+  `customer` varchar(30) NOT NULL,
+  `customer_id` varchar(100) DEFAULT NULL,
+  `amount` bigint(13) unsigned NOT NULL,
+  `date` date NOT NULL,
+  `user_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `creditors`
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 09, 2013 at 01:44 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `forexbuerau`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cash_at_bank_ugxes`
+--
+
+CREATE TABLE IF NOT EXISTS `withdrawals` (
+  `id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,
+  `amount` bigint(13) unsigned NOT NULL,
+  `additional_info` text NULL,
+  `date` date NOT NULL,
+  `user_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `cash_at_bank_ugxes`
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 09, 2013 at 02:09 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `forexbuerau`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `withdrawals`
+--
+
+CREATE TABLE IF NOT EXISTS `additional_profits` (
+  `id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,
+  `amount` bigint(13) unsigned NOT NULL,
+  `additional_info` text,
+  `date` date NOT NULL,
+  `user_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `withdrawals`
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 09, 2013 at 07:23 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `forexbuerau`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `withdrawals`
+--
+
+CREATE TABLE IF NOT EXISTS `withdrawals` (
+  `id` bigint(13) unsigned NOT NULL AUTO_INCREMENT,
+  `customer_id` varchar(100) NOT NULL,
+  `customer` varchar(30) NOT NULL,
+  `amount` bigint(13) unsigned NOT NULL,
+  `additional_info` text,
+  `date` date NOT NULL,
+  `user_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `withdrawals`
+--
+

@@ -1,0 +1,27 @@
+#cw_overlay
+	{
+	position: absolute;
+	display: block;
+	height: 10000px;
+	width: 100%;
+	background-color: #ffffff;
+	top: -34px;
+	left: 0;
+	z-index: 99998;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	}
+
+#cw_content
+	{
+	position: fixed;
+	width: 300px;
+	height: 200px;
+	min-height: 200px;
+	overflow: hidden;
+	background-color: #D8E6F9;
+	z-index: 99999;
+	border: 2px solid #495F89;
+	-webkit-border-radius: 5px;
+	cursor: default;
+	}

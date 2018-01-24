@@ -1,0 +1,32 @@
+/* Slow Auto Scroll - Plugin Settings */
+ul.scroller {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+ul.speeds {
+  padding-left: 0;
+  display:none;
+  list-style-type: none;
+}
+ul.scroller li {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin-right: 10%;
+}
+ul.scroller li:hover {
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 10%;
+}
+.scroller li {
+  padding: 5px;
+  color: black;
+  position: relative;
+}
+.appear {
+  display: block;
+}

@@ -1,0 +1,19 @@
+Notice (8): Use of undefined constant currency_id - assumed 'currency_id' [APP\View\PurchasedReceipts\edit.ctp, line 63]
+Notice (8): Use of undefined constant currency_id - assumed 'currency_id' [APP\View\PurchasedReceipts\edit.ctp, line 72]
+Notice (8): Use of undefined constant currency_id - assumed 'currency_id' [APP\View\SoldReceipts\edit.ctp, line 82]
+Notice (8): Use of undefined constant currency_id - assumed 'currency_id' [APP\View\SoldReceipts\edit.ctp, line 91]
+Notice (8): Use of undefined constant Cachier - assumed 'Cachier' [APP\View\Openings\index.ctp, line 15]
+Notice (8): Undefined variable: total_cash_at_bank_ugx [APP\Controller\BalancingsController.php, line 249]
+Notice (8): Undefined variable: total_cash_at_bank_foreign [APP\Controller\BalancingsController.php, line 249]
+Notice (8): Undefined offset: 0 [APP\Controller\BalancingsController.php, line 440]
+Notice (8): Undefined offset: 0 [APP\Controller\BalancingsController.php, line 441]
+
+
+
+http://localhost/fx/balancings/clean_safe_transactions
+
+select * from sold_receipts where currency_id='c1' and `other_name`='usds';
+select * from purchased_receipts where currency_id='c1' and `other_name`='usds';
+
+UPDATE `sold_receipts` SET currency_id='c8',orig_amount=amount,orig_rate=rate WHERE `other_name`='usds'
+UPDATE `purchased_receipts` SET currency_id='c8',orig_amount=amount,orig_rate=rate WHERE `other_name`='usds'

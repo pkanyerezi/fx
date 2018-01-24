@@ -1,0 +1,14 @@
+1. SQL Updates
+
+ALTER TABLE `foxes` ADD `server_public_ip` VARCHAR( 16 ) NOT NULL DEFAULT '127.0.0.1' AFTER `reports_notification_emails` ;
+ALTER TABLE `openings` ADD `transfers_made` TEXT NULL;
+
+2. Filter by `names/cashiers`,`date` from the list showing SafeTransactions/Transfers between cashiers
+
+3. server_public_ip field on company details/settings. This will be used as  the ip address of the server in-case of remote client access during file downloads
+
+4. SafeTransactions/Transfers between cashiers summary is now displaying on the `DailyGeneralClosingPosition` page
+
+5. The unnecessary/confusing `Others` column has been removed from `DailyGeneralClosingPosition` page 
+
+6. loading.....please wait

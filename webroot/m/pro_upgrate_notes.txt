@@ -1,0 +1,33 @@
+1. Printing from multiple printers. Each computer can print from its own printer.
+	You will need to set this in the cashiers accounts and below are the options
+	- Print from main PC
+		This will keep the default ip address of the server for all the receipts.
+	- Print from this PC
+		This will set the IP address to this computer's such that it will only print receipts created from
+		this computer
+2. For large cash > 5,000 USD CustomerDetails will be required to be entered by the cachier as a must.
+3. System admin can determine whether cashiers can edit/delete receipts
+4. Cashier will be required to change their passwords at the end of a month
+5. Safe
+	Admins will approve safe transactions before they are executed.
+	How
+		-Cashier1 sends money to cashier2
+		-This transaction is saved in a pending status and super admins are all notified
+		-Super_admin approves the transaction and money is deducted from the safe balance.
+6. Notifications plugin reused
+7.Webroot js script_dynamic.js edited
+8.Added reports_notification_emails in system/company/foxDB settings
+9.More access permissions to system reports by cashiers
+10.Adding Customers/Banks allows capturing additional details
+
+You need to enable SSL and SMTP on localhost in PHP settings if its not enabled
+
+12. Launch the notifier server on to push out email notifications of reports.
+	- Link can be found under Report Notification Emails in the side-menu
+
+
+
+For none-Pro
+Update the methods in BalancingsController below by replacing them
+	1 - generate_excel_cash_flow
+	2 - show_cash_flow
